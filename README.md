@@ -1,2 +1,2 @@
 # Pattern_extraction_in_time_series_data
-Clustering based structure detection of time series data
+We observed the existence of periodic,repetitive structures in economic time series data.By applying a sequence of segmentation,clustering and automata algorithm,we segregated the entire time series data into around 9-10 structures only and then the automata was used to extrapolate future points and the structures through which that future point is to be reached giving a fair idea of future performances in stocks markets,the probability that that future point will be reached via that structure,etc.
