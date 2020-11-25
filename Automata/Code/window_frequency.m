@@ -11,7 +11,7 @@ sig3 = zeros(length(seq),1);
 %as 5.
 for i = 3:(length(seq)-2)
     window = [seq(i-2),seq(i-1),seq(i),seq(i+1),seq(i+2)];
-    w1 = histc(window,1);
+    w1 = histc(window,1);  %https://www.mathworks.com/help/matlab/ref/histc.html
     w2 = histc(window,2);
     w3 = histc(window,3);
     f1 = w1/7;
