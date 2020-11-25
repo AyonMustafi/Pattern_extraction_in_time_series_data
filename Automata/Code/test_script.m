@@ -7,7 +7,7 @@ seq = transition_sequence(clse);
 
 [sig1,sig2,sig3] = window_frequency(seq);
 
-brk = test_segmentation(sig1,sig2,sig3);
+brk = segmentation(sig1,sig2,sig3);
 
 % a) Finding the length of each segment 
 num_blocks = histc(brk,1);
