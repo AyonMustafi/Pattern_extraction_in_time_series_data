@@ -38,7 +38,7 @@ for i = 1:num_blocks
 end
 
 %Plot the segments and the time series.
-p1 = plot_test_segments(brk, clse, start_and_end, num_large_partitions, large_partitions);
+p1 = plot_test_segments(brk, clse, start_and_end, num_blocks, partitions);
 hold on;
 
 %Computing the predicted sequence of structures
