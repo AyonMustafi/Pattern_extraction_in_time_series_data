@@ -1,4 +1,4 @@
-function [ brk ] = test_segmentation( sig1,sig2,sig3 )
+function [ brk ] = segmentation( sig1,sig2,sig3 )
 %The function which returns the indices of the time series at which it has
 %to be segmented.
 
