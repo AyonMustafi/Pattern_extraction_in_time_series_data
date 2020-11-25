@@ -31,8 +31,8 @@ len_segments(cnt-1) = (start_and_end(cnt-1,2) - start_and_end(cnt-1,1)) + 1;
 segment_partitions = zeros(num_blocks, 2);   %Stores the the partitions to which the end and beginning point of each segment belongs to.
 
 for i = 1:num_blocks
-    start_partition = partition_containing_point(large_partitions, clse(start_and_end(i,1)));
-    end_partition = partition_containing_point(large_partitions, clse(start_and_end(i,2)));
+    start_partition = partition_containing_point(partitions, clse(start_and_end(i,1)));
+    end_partition = partition_containing_point(partitions, clse(start_and_end(i,2)));
     segment_partitions(i,1) = start_partition;
     segment_partitions(i,2) = end_partition;
 end
