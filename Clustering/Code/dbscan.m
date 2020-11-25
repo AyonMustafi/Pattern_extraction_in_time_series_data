@@ -7,7 +7,7 @@ pt = points;
 processed_points = cluster(func,ad_list);
 c = find_centroids(processed_points,points);
 
-outliers = zeros(histc(func,-1),size(points,2));
+outliers = zeros(histc(func,-1),size(points,2)); % Counts the number of -1 which are the outliers.
 cnt = 1;
 for i = 1:size(points,1);
     if(func(i) == -1)
