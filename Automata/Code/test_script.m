@@ -11,9 +11,9 @@ brk = segmentation(sig1,sig2,sig3);
 
 % a) Finding the length of each segment 
 num_blocks = histc(brk,1);
-start_and_end = zeros(num_blocks, 2);
-len_segments = zeros(num_blocks, 1);
-start_and_end(1,1) = 1;
+start_and_end = zeros(num_blocks, 2);  %Stores start and end point of each segment
+len_segments = zeros(num_blocks, 1);   %Stores the length of each segment
+start_and_end(1,1) = 1; 
 cnt = 2;
 for i = 2:length(brk)
     if(brk(i) == 1)
@@ -28,7 +28,7 @@ len_segments(cnt-1) = (start_and_end(cnt-1,2) - start_and_end(cnt-1,1)) + 1;
 
 
 % b) Finding starting and end partition of each segment
-segment_partitions = zeros(num_blocks, 2);
+segment_partitions = zeros(num_blocks, 2);   %Stores the the partitions to which the end and beginning point of each segment belongs to.
 
 for i = 1:num_blocks
     start_partition = partition_containing_point(large_partitions, clse(start_and_end(i,1)));
